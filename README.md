@@ -31,5 +31,5 @@ Traverse to the root of the downloaded/cloned folder. Start the terminal and typ
 You need to have python installed to work this through.
 
 
-Once the server is up. Go to the browser and do "http://localhost:8000".
+Once the server is up. Go to the browser and hit `http://localhost:8000`.
 This will push the index.html page up.
