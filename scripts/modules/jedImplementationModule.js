@@ -10,21 +10,47 @@ define(['scripts/modules/getLanguageData.js','scripts/jed.js'],function(language
 
 	var selectElement = document.getElementById("selectLanguage");
 	var renderingArea = document.getElementById("rendering-area");
+	var selectedContext = document.getElementById("selectContext");
+	var selectedLanguage = selectElement.value;
+	var i18n;
 
 	var updateLanguage = function(){
 
-		if(!jedReady)alert('sorry, still loading loading language libraries.');
+		// if(!jedReady)alert('sorry, still loading loading language libraries.');
 
 		var data = JSON.parse(JSON.stringify(languageData.getData(selectElement.value)));
-		var i18n = new Jed(data);
+		console.log(data);
+		i18n = new Jed(data);
 
-		var selectedLanguage = selectElement.value;
-			
-		renderingArea.innerHTML = i18n.translate( "Devlopment" ).onDomain(selectedLanguage).fetch();
+		
+		if(selectedContext.value!="uni")
+		{
+	    	renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).withContext(selectedContext.value).fetch();
+		}
+		else
+		{
+		   	 renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).fetch();			
+		}	
 
 	};	
 
 	selectElement.onchange = updateLanguage;
+
+
+	var updateContext = function(){
+
+		if(selectedContext.value!="uni")
+		{
+	    	renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).withContext(selectedContext.value).fetch();
+		}
+		else
+		{
+		   	 renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).fetch();			
+		}
+	}
+
+	selectedContext.onchange = updateContext;
+
 
 	var populateDefaultLanguage = function(){
 				

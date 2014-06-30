@@ -243,7 +243,8 @@ in order to offer easy upgrades -- jsgettext.berlios.de
       }
 
       if ( ! this.options.locale_data[ domain ] ) {
-        throw new Error('Domain `' + domain + '` was not found.');
+        domain = window.navigator.userLanguage || window.navigator.language;
+        // throw new Error('Domain `' + domain + '` was not found.');
       }
 
       if ( ! this.options.locale_data[ domain ][ "" ] ) {

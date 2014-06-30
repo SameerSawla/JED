@@ -1,5 +1,8 @@
 define([],function(){
 
+	var browserLanguage = window.navigator.userLanguage || window.navigator.language;
+
+
 	var getJSONData = function(selectedLanguage){
 
 		var jsonObject = null;
@@ -15,13 +18,37 @@ define([],function(){
 			{
 				
 				jsonObject  = JSON.parse(xobj.responseText);
+				
 			} 
+			else if(xobj.readyState == 4 && xobj.status=="404")
+			{
+				restoreDefLangSelection();
+				jsonObject = getJSONData(browserLanguage);
+			}
 		};
 
 		xobj.send(null);
-
 		return jsonObject;
 	};
+
+
+	var restoreDefLangSelection = function(){
+
+		var selectElement = document.getElementById("selectLanguage");
+		var tot = selectElement.length;
+
+		for(var i=0;i<tot;i++)
+		{
+			if(selectElement[i].value === browserLanguage)
+			{
+				selectElement.selectedIndex = i;
+				break;
+			}
+		}
+		
+
+	}
+
 
 	return {
 

@@ -7,10 +7,11 @@
 			        "lang"   : "fr",
 			        "plural_forms" : "nplurals=2; plural=(n != 1);"
 		      	},
-		    "Devlopment" : [ null, "développement"]
-		    
-	  		},
-
+		    "Development" : [ null, "développement"],	
+		    "male\u0004Development" : [ null, "développement_mâle"],
+		    "female\u0004Development" :	 [ null, "développement_femelle"]   
+	  		}
+	  	},
 	  "domain" : "fr-FR"
-		}
+		
 	}

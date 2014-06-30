@@ -4,11 +4,14 @@
 	    	"en-US" : {
 	      	"" : {
 	        		"domain" : "en-US",
-			        "lang"   : "fr",
+			        "lang"   : "en",
 			        "plural_forms" : "nplurals=2; plural=(n != 1);"
 		      	},
-		    "Devlopment" : [ null, "Devlopment"]
-		    },
+		    "Development" : [ null, "Development"],
+		    "male\u0004Development" : [null,"Development_Male"],
+		    "female\u0004Development" : [null,"Development_Female"]
+		    }
+		},
 	  "domain" : "en-US"
-		}
+		
 	}
