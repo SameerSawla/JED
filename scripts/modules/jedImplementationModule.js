@@ -1,39 +1,43 @@
 define(['scripts/modules/getJSONData.js','scripts/jed.js'],function(getJSONData,$){
 
-	var selectOnChange = function(){
+	//var selectOnChange = function(){
 
-		var selectedElement = document.getElementById("selectLanguage");
+		var selectElement = document.getElementById("selectLanguage");
+		var renderingArea = document.getElementById("rendering-area");
+
 		selectElement.onchange = function(){
 
-		var test = JSON.parse(JSON.stringify(getJSONData.getJSON(selectElement.value)));
-		var i18n = new Jed(test);
+			var languageData = JSON.parse(JSON.stringify(getJSONData.getJSON(selectElement.value)));
+			var i18n = new Jed(languageData);
 
-		var selectedLanguage = document.getElementById("selectLanguage").value;
+			var selectedLanguage = selectElement.value;
+			
+			renderingArea.innerHTML = i18n.translate( "Devlopment" ).onDomain(selectedLanguage).fetch();
 
-		var divOne = document.getElementById("divOne");
-		divOne.innerHTML = i18n.translate( "Devlopment" ).onDomain(selectedLanguage).fetch();
-		
+		};	
 
-	};	
-
-};
+//};
 
 	var populateDefaultLanguage = function(){
-		var selectElement = document.getElementById('selectLanguage');
+		
+		
 		var language = window.navigator.userLanguage || window.navigator.language;
-		for(var i=0;i<selectElement.length;i++)
+		var tot = selectElement.length;
+
+		for(var i=0;i<tot;i++)
 		{
-			if(selectElement[i].value==language)
+			if(selectElement[i].value === language)
 			{
 				selectElement.selectedIndex = i;
 				break;
 			}
 		}
+		
 		selectElement.onchange();
 	};
 
 	return {
-		performOp : selectOnChange,
+		
 		populateDefLang : populateDefaultLanguage
 	};
 });
