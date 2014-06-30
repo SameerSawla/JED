@@ -8,9 +8,9 @@
 			        "lang"   : "en",
 			        "plural_forms" : "nplurals=2; plural=(n != 1);"
 	      		},
-	      	"Development" : [ null, "Developement"],
-	      	"male\u0004Development" : [ null, "Developement_Male"],
-	      	"female\u0004Development" : [null, "Developement_Female"]
+	      	"Development" : [ null, "Developement", "Developements"],
+	      	"male\u0004Development" : [ null, "Developement_Male", "Developements_Male"],
+	      	"female\u0004Development" : [null, "Developement_Female","Developements_Female"]
 	   		 }
 	    },
 	  "domain" : "en-UK"

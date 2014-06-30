@@ -25,11 +25,11 @@ define(['scripts/modules/getLanguageData.js','scripts/jed.js'],function(language
 		
 		if(selectedContext.value!="uni")
 		{
-	    	renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).withContext(selectedContext.value).fetch();
+	    	renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).withContext(selectedContext.value).ifPlural(2).fetch(2);
 		}
 		else
 		{
-		   	 renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).fetch();			
+		   	 renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).ifPlural(2).fetch(2);			
 		}	
 
 	};	
@@ -41,11 +41,11 @@ define(['scripts/modules/getLanguageData.js','scripts/jed.js'],function(language
 
 		if(selectedContext.value!="uni")
 		{
-	    	renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).withContext(selectedContext.value).fetch();
+	    	renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).withContext(selectedContext.value).ifPlural(2).fetch(2);
 		}
 		else
 		{
-		   	 renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).fetch();			
+		   	 renderingArea.innerHTML = i18n.translate( "Development" ).onDomain(selectedLanguage).ifPlural(2).fetch(2);			
 		}
 	}
 
