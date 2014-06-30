@@ -1,12 +1,22 @@
-define(['scripts/modules/getJSONData.js','scripts/jed.js'],function(getJSONData,$){
+define(['scripts/modules/getLanguageData.js','scripts/jed.js'],function(languageData){
+
+	var jedReady;
+
+	require(['scripts/jed.js'], function(){
+
+		jedReady = true;
+
+	});
 
 	var selectElement = document.getElementById("selectLanguage");
 	var renderingArea = document.getElementById("rendering-area");
 
 	var updateLanguage = function(){
 
-		var languageData = JSON.parse(JSON.stringify(getJSONData.getJSON(selectElement.value)));
-		var i18n = new Jed(languageData);
+		if(!jedReady)alert('sorry, still loading loading language libraries.');
+
+		var data = JSON.parse(JSON.stringify(languageData.getData(selectElement.value)));
+		var i18n = new Jed(data);
 
 		var selectedLanguage = selectElement.value;
 			
@@ -17,8 +27,7 @@ define(['scripts/modules/getJSONData.js','scripts/jed.js'],function(getJSONData,
 	selectElement.onchange = updateLanguage;
 
 	var populateDefaultLanguage = function(){
-		
-		
+				
 		var language = window.navigator.userLanguage || window.navigator.language;
 		var tot = selectElement.length;
 
