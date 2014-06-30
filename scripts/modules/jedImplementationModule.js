@@ -1,22 +1,20 @@
 define(['scripts/modules/getJSONData.js','scripts/jed.js'],function(getJSONData,$){
 
-	//var selectOnChange = function(){
+	var selectElement = document.getElementById("selectLanguage");
+	var renderingArea = document.getElementById("rendering-area");
 
-		var selectElement = document.getElementById("selectLanguage");
-		var renderingArea = document.getElementById("rendering-area");
+	var updateLanguage = function(){
 
-		selectElement.onchange = function(){
+		var languageData = JSON.parse(JSON.stringify(getJSONData.getJSON(selectElement.value)));
+		var i18n = new Jed(languageData);
 
-			var languageData = JSON.parse(JSON.stringify(getJSONData.getJSON(selectElement.value)));
-			var i18n = new Jed(languageData);
-
-			var selectedLanguage = selectElement.value;
+		var selectedLanguage = selectElement.value;
 			
-			renderingArea.innerHTML = i18n.translate( "Devlopment" ).onDomain(selectedLanguage).fetch();
+		renderingArea.innerHTML = i18n.translate( "Devlopment" ).onDomain(selectedLanguage).fetch();
 
-		};	
+	};	
 
-//};
+	selectElement.onchange = updateLanguage;
 
 	var populateDefaultLanguage = function(){
 		
@@ -32,8 +30,9 @@ define(['scripts/modules/getJSONData.js','scripts/jed.js'],function(getJSONData,
 				break;
 			}
 		}
-		
-		selectElement.onchange();
+
+		updateLanguage();
+
 	};
 
 	return {
