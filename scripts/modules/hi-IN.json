@@ -1,0 +1,16 @@
+	{  			
+	  	"locale_data" : 
+	  	{
+	    	
+	    	"hi-IN" : {
+	      	"" : {
+	        		"domain" : "hi-IN",
+			        "lang"   : "fr",
+			        "plural_forms" : "nplurals=2; plural=(n != 1);"
+		      	},
+		    "Devlopment" : [ null, "&#2340;&#2352;&#2381;&#2352;&#2325;&#2368;"]
+		    },
+
+	  "domain" : "hi-IN"
+		}
+	}

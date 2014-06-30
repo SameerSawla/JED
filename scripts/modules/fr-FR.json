@@ -1,0 +1,16 @@
+	{  			
+	  	"locale_data" : 
+	  	{
+	    	"fr-FR" : {
+	      	"" : {
+	        		"domain" : "fr-FR",
+			        "lang"   : "fr",
+			        "plural_forms" : "nplurals=2; plural=(n != 1);"
+		      	},
+		    "Devlopment" : [ null, "développement"]
+		    
+	  		},
+
+	  "domain" : "fr-FR"
+		}
+	}

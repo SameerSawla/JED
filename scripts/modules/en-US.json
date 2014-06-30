@@ -1,0 +1,14 @@
+	{  			
+	  	"locale_data" : 
+	  	{
+	    	"en-US" : {
+	      	"" : {
+	        		"domain" : "en-US",
+			        "lang"   : "fr",
+			        "plural_forms" : "nplurals=2; plural=(n != 1);"
+		      	},
+		    "Devlopment" : [ null, "Devlopment"]
+		    },
+	  "domain" : "en-US"
+		}
+	}

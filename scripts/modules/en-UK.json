@@ -1,0 +1,16 @@
+	{  			
+	  	"locale_data" : 
+	  	{
+	    	
+	  		"en-UK" : {
+	      	"" : {
+			        "domain" : "en-UK",
+			        "lang"   : "en",
+			        "plural_forms" : "nplurals=2; plural=(n != 1);"
+	      		},
+	      	"Devlopment" : [ null, "Developement"]
+	   		 },
+	    
+	  "domain" : "en-UK"
+		}
+	}
