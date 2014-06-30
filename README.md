@@ -25,7 +25,9 @@ Or
 
 Traverse to the root of the downloaded/cloned folder. Start the terminal and type 
 
-"python -m SimpleHTTPServer" , this will instantiate a local server on the default port (8000)
+` python -m SimpleHTTPServer `
+
+, this will instantiate a local server on the default port (8000)
 You need to have python installed to work this through.
 
 
