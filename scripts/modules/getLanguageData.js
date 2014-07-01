@@ -16,7 +16,6 @@ define([],function(){
 		xobj.onreadystatechange = function() {
 			if(xobj.readyState == 4 && xobj.status=="200")
 			{
-				
 				jsonObject  = JSON.parse(xobj.responseText);
 				
 			} 
@@ -45,7 +44,7 @@ define([],function(){
 				break;
 			}
 		}
-		
+
 
 	}
 
