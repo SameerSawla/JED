@@ -7,7 +7,8 @@
 			        "lang"   : "fr",
 			        "plural_forms" : "nplurals=2; plural=(n != 1);"
 		      	},
-		    "Development" : [ null, "développement"],	
+		    "Development" : [ null, "développement"],
+	      	"I own %d house" : [null, "Je possède %d maison", "Je possède %d maisons"],
 		    "male\u0004Development" : [ null, "développement_mâle"],
 		    "female\u0004Development" :	 [ null, "développement_femelle"]   
 	  		}
